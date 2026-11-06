@@ -81,7 +81,10 @@ def _():
 
             def keys(self):
                 j = list(__lua_table.keys())
-                j.sort()
+                try:
+                    j.sort()
+                except Exception:
+                    pass
                 return j
 
             def values(self):
